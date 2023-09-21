@@ -6,15 +6,11 @@ const Game = ({ rows, columns }) => {
   const [gameOver, setGameOver, resetGameOver] = useGameOver();
   const start = () => resetGameOver();
   return (
-    <div className="Game">
+    <div className="items-center">
       {gameOver ? (
         <Menu onClick={start} />
       ) : (
-        <Tetris
-          rows={rows}
-          columns={columns}
-          setGameOver={setGameOver}
-        />
+        <Tetris rows={rows} columns={columns} setGameOver={setGameOver} />
       )}
     </div>
   );

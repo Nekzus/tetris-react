@@ -8,7 +8,7 @@ const Preview = ({ tetromino, index }) => {
 
   const board = buildBoard({ rows: 4, columns: 4 });
 
-  const style = { top: `${index * 15}vw` };
+  const style = { top: `${index * 9}vw` };
 
   board.rows = transferToBoard({
     className,
@@ -20,10 +20,10 @@ const Preview = ({ tetromino, index }) => {
 
   return (
     <div
-      className="absolute left-[72.2vw] top-0 rounded-[10px] border-[10px_solid_rgba(0,0,0,0)] bg-[rgba(0,0,0,0.1)]"
+      className="absolute left-[380px] top-0 rounded-[5px] border-[10px_solid_rgba(0,0,0,0)] bg-[rgba(0,0,0,0.1)] md:left-[570px] md:rounded-[8px] lg:left-[62.5vw] lg:rounded-[10px]"
       style={style}
     >
-      <div className="grid h-[11vw] w-[11vw] grid-cols-[repeat(4,1fr)] grid-rows-[repeat(4,1fr)] gap-0.5">
+      <div className="grid h-[40px] w-[40px] grid-cols-[repeat(4,1fr)] grid-rows-[repeat(4,1fr)] gap-0.5 md:h-[50px] md:w-[50px] lg:h-[8vw] lg:w-[8vw]">
         {board.rows.map((row, y) =>
           row.map((cell, x) => (
             <BoardCell key={x * board.size.columns + x} cell={cell} />
