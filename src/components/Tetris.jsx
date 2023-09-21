@@ -16,7 +16,7 @@ const Tetris = ({ rows, columns, setGameOver }) => {
     addLinesCleared,
   });
   return (
-    <div className="bg-violet-400">
+    <div className="relative">
       <Board board={board} />
       <GameStats gameStats={gameStats} />
       <Previews tetrominoes={player.tetrominoes} />

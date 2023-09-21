@@ -2,11 +2,8 @@ import Game from "./components/Game";
 
 const App = () => {
   return (
-    <div className="p-20 h-full text-center bg-violet-400 text-white">
-      <Game
-        rows={20}
-        columns={10}
-      />
+    <div className="h-screen bg-violet-950 p-5 text-center font-sans text-white">
+      <Game rows={20} columns={10} />
     </div>
   );
 };

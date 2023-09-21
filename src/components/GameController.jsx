@@ -56,7 +56,7 @@ const GameController = ({
 
   return (
     <input
-      className="GameController"
+      className="absolute -top-[100em]"
       type="text"
       onKeyDown={onKeyDown}
       onKeyUp={onKeyUp}

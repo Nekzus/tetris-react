@@ -20,16 +20,13 @@ const Preview = ({ tetromino, index }) => {
 
   return (
     <div
-      className="Preview"
+      className="absolute left-[72.2vw] top-0 rounded-[10px] border-[10px_solid_rgba(0,0,0,0)] bg-[rgba(0,0,0,0.1)]"
       style={style}
     >
-      <div className="Preview-board">
+      <div className="grid h-[11vw] w-[11vw] grid-cols-[repeat(4,1fr)] grid-rows-[repeat(4,1fr)] gap-0.5">
         {board.rows.map((row, y) =>
           row.map((cell, x) => (
-            <BoardCell
-              key={x * board.size.columns + x}
-              cell={cell}
-            />
+            <BoardCell key={x * board.size.columns + x} cell={cell} />
           ))
         )}
       </div>
